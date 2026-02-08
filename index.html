@@ -7,319 +7,284 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Terminal Status Bar -->
+    <div class="window-bar">
+        <span class="window-title" id="status-section">~/arjun/about</span>
+    </div>
+
+    <!-- Mobile Nav (hidden on desktop) -->
     <nav id="navbar">
         <div class="nav-inner">
-            <a href="#hero" class="nav-logo">AN</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#ventures">Ventures</a>
-                <a href="#research">Research</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <a href="#" class="nav-logo">~/arjun</a>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
         </div>
+        <div class="nav-links">
+            <a href="#about" data-section="about">about</a>
+            <a href="#experience" data-section="experience">experience</a>
+            <a href="#research" data-section="research">research</a>
+            <a href="#projects" data-section="projects">projects</a>
+            <a href="#blog" data-section="blog">blog</a>
+            <a href="#contact" data-section="contact">contact</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <canvas id="particle-canvas"></canvas>
-        <div class="hero-content">
-            <p class="hero-greeting">Hi, I'm</p>
-            <h1 class="hero-name">Arjun Nargolwala</h1>
-            <div class="hero-typing">
-                <span class="typing-text"></span><span class="cursor">|</span>
-            </div>
-            <p class="hero-description">
-                Engineer, founder, and researcher at the intersection of systems, intelligence, and markets.
-            </p>
-            <div class="hero-cta">
-                <a href="#experience" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll</span>
-        </div>
-    </section>
+    <div class="split">
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">01.</span> About</h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>
-                        I'm a student in the <strong>Jerome Fisher M&T Program</strong> at the
-                        <strong>University of Pennsylvania</strong>, pursuing dual degrees across
-                        Penn Engineering and the Wharton School.
+        <!-- Left Panel — Fixed Identity -->
+        <aside class="panel-left">
+            <div class="panel-left-inner">
+                <div class="hero-content">
+                    <p class="hero-label stagger">$ bitaboutme</p>
+                    <h1 class="hero-name stagger" id="hero-name"></h1>
+                    <p class="hero-tagline stagger">Research, Engineering, Investing <span class="cursor">_</span></p>
+                    <p class="hero-subtitle stagger">
+                        At the intersection of systems, intelligence, and markets.
                     </p>
-                    <p>
-                        My work spans building AI-native enterprise software, designing quantitative
-                        trading systems, and researching large-scale machine learning and quantum
-                        computing. I care about building things that work at the boundary of what's possible.
-                    </p>
+                    <div class="hero-links stagger">
+                        <a href="mailto:arjunvnargolwala@gmail.com">email</a>
+                        <span class="sep">/</span>
+                        <a href="https://github.com/ArjunNargolwala04" target="_blank" rel="noopener noreferrer">github</a>
+                        <span class="sep">/</span>
+                        <a href="https://www.linkedin.com/in/arjun-nargolwala" target="_blank" rel="noopener noreferrer">linkedin</a>
+                        <span class="sep">/</span>
+                        <a href="https://x.com/ArjunNargolwala" target="_blank" rel="noopener noreferrer">twitter</a>
+                    </div>
                 </div>
-                <div class="about-details reveal">
-                    <div class="detail-card">
-                        <h3>Engineering</h3>
-                        <p>BS Computer & Information Science, Mathematics</p>
-                        <span class="detail-school">Penn Engineering</span>
-                    </div>
-                    <div class="detail-card">
-                        <h3>Business</h3>
-                        <p>BS Economics, Finance, Statistics</p>
-                        <span class="detail-school">The Wharton School</span>
-                    </div>
+                <nav class="panel-nav stagger">
+                    <a href="#about" data-section="about" class="active"><span class="nav-prompt">&gt; </span>about</a>
+                    <a href="#experience" data-section="experience"><span class="nav-prompt">&gt; </span>experience</a>
+                    <a href="#research" data-section="research"><span class="nav-prompt">&gt; </span>research</a>
+                    <a href="#projects" data-section="projects"><span class="nav-prompt">&gt; </span>projects</a>
+                    <a href="#blog" data-section="blog"><span class="nav-prompt">&gt; </span>blog</a>
+                    <a href="#contact" data-section="contact"><span class="nav-prompt">&gt; </span>contact</a>
+                </nav>
+                <div class="build-status">
+                    <div class="build-label">arjun v3.0 <span class="build-year">2026</span></div>
+                    <div class="build-bar"><div class="build-fill"></div></div>
+                    <div class="build-info"><span class="build-dot">&#9679;</span> running</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </aside>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">02.</span> Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Investment Engineer</h3>
-                        <span class="company">Oraclum Capital</span>
-                        <p>Quantitative investment engineering combining ML-driven signal generation with systematic portfolio construction.</p>
-                        <div class="tags">
-                            <span class="tag">Quantitative Finance</span>
-                            <span class="tag">ML</span>
-                            <span class="tag">Python</span>
+        <!-- Right Panel — Single Section View -->
+        <main class="panel-right">
+
+            <!-- About Section -->
+            <section id="about" class="section active">
+                <h2 class="section-heading"><span class="prompt">&gt;</span> about</h2>
+                <div class="about-edu">
+                    <h3 class="edu-header">University of Pennsylvania M&amp;T Program '27</h3>
+                    <div class="edu-degrees">
+                        <div class="edu-card">
+                            <span class="edu-school">Penn Engineering</span>
+                            <span class="edu-degree">B.S.E Computer Science, Mathematics</span>
+                        </div>
+                        <div class="edu-card">
+                            <span class="edu-school">The Wharton School</span>
+                            <span class="edu-degree">B.S Economics, Finance</span>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Machine Learning Engineer</h3>
-                        <span class="company">Allegro Microsystems</span>
-                        <p>Built and deployed ML pipelines for semiconductor sensor applications, working on production-grade inference systems.</p>
-                        <div class="tags">
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">Sensors</span>
-                            <span class="tag">MLOps</span>
+                <div class="terminal-output">
+                    <p class="term-line"><span class="term-prompt">&gt;</span> Grew up between Boston and London. Now based in Philly.</p>
+                    <p class="term-line"><span class="term-prompt">&gt;</span> I build AI systems, do ML research, and invest in startups.</p>
+                    <p class="term-line"><span class="term-prompt">&gt;</span> Research Engineer @ Labelbox &mdash; RL, evals, post-training.</p>
+                    <p class="term-line"><span class="term-prompt">&gt;</span> Contributed to models at Anthropic, DeepMind, and Meta FAIR.</p>
+                    <p class="term-line"><span class="term-prompt">&gt;</span> Multi-agent RL research @ Penn ML Theory Group.</p>
+                    <p class="term-line"><span class="term-prompt">&gt;</span> Venture Partner @ Contrary Capital.</p>
+                    <p class="term-line"><span class="term-prompt">&gt;</span> Chess, poker, cars, food, impressionist art.</p>
+                </div>
+                <div class="about-locations">
+                    <span class="location-item"><span class="status-icon">&#9679;</span> Boston</span>
+                    <span class="location-item"><span class="status-icon">&#9679;</span> Philadelphia</span>
+                    <span class="location-item"><span class="status-icon">&#9679;</span> San Francisco</span>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <h2 class="section-heading"><span class="prompt">&gt;</span> experience</h2>
+                <div class="flat-list">
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">Venture Partner</span>
+                            <span class="flat-item-org">Contrary</span>
                         </div>
+                        <div class="tags"><span class="tag">Venture Capital</span><span class="tag">Startups</span></div>
+                    </div>
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">Machine Learning Researcher</span>
+                            <span class="flat-item-org">Penn Engineering &mdash; ML Theory Group</span>
+                        </div>
+                        <div class="tags"><span class="tag">Multi-Agent RL</span><span class="tag">ML Theory</span></div>
+                    </div>
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">Research Engineer</span>
+                            <span class="flat-item-org">Labelbox</span>
+                        </div>
+                        <div class="tags"><span class="tag">RL</span><span class="tag">Agents</span><span class="tag">Model Evals</span><span class="tag">Post-Training</span></div>
+                    </div>
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">Engineering Fellow</span>
+                            <span class="flat-item-org">Kleiner Perkins</span>
+                        </div>
+                        <div class="tags"><span class="tag">Fellowship</span><span class="tag">Engineering</span><span class="tag">VC</span></div>
+                    </div>
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">Growth Intern</span>
+                            <span class="flat-item-org">Mercor</span>
+                        </div>
+                        <div class="tags"><span class="tag">Growth</span><span class="tag">Platform</span></div>
+                    </div>
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">AI/ML Fellow</span>
+                            <span class="flat-item-org">Cerebras Systems</span>
+                        </div>
+                        <div class="tags"><span class="tag">AI/ML</span><span class="tag">Fellowship</span></div>
+                    </div>
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">Robotics Research Engineer</span>
+                            <span class="flat-item-org">GRASP Lab &mdash; X-Lab</span>
+                        </div>
+                        <div class="tags"><span class="tag">VLMs</span><span class="tag">Robotics</span></div>
+                    </div>
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">ML Engineer Intern</span>
+                            <span class="flat-item-org">Allegro MicroSystems</span>
+                        </div>
+                        <div class="tags"><span class="tag">ML</span><span class="tag">Semiconductor</span><span class="tag">ASIC Design</span></div>
                     </div>
                 </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Senior Software Engineer</h3>
-                        <span class="company">RetailMint</span>
-                        <p>Led development of core platform features for retail analytics, building scalable backend systems and data pipelines.</p>
-                        <div class="tags">
-                            <span class="tag">Full-Stack</span>
-                            <span class="tag">Analytics</span>
-                            <span class="tag">Distributed Systems</span>
+            </section>
+
+            <!-- Research Section -->
+            <section id="research" class="section">
+                <h2 class="section-heading"><span class="prompt">&gt;</span> research</h2>
+                <div class="flat-list">
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">Multi-Agent Reinforcement Learning</span>
+                            <span class="flat-item-org">Penn Engineering &mdash; ML Theory Group</span>
                         </div>
+                        <p class="flat-item-desc">Research on multi-agent reinforcement learning systems, exploring coordination, competition, and emergent behavior in complex multi-agent environments.</p>
+                    </div>
+                    <div class="flat-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-role">Vision-Language Models for Industrial Robotics</span>
+                            <span class="flat-item-org">GRASP Lab &mdash; X-Lab</span>
+                        </div>
+                        <p class="flat-item-desc">Developing vision-language model applications for industrial robotics, bridging perception and language understanding for robotic manipulation and task planning.</p>
                     </div>
                 </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Technology Venture Capital</h3>
-                        <span class="company">Hewlett Packard</span>
-                        <p>Evaluated early-stage technology investments, conducting technical due diligence on deep-tech startups.</p>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <h2 class="section-heading"><span class="prompt">&gt;</span> projects</h2>
+                <div class="flat-list">
+                    <div class="flat-item">
+                        <div class="flat-item-title-row">
+                            <span class="flat-item-title">CUDA-Accelerated Berkeley Packet Filter</span>
+                            <a href="https://github.com/ArjunNargolwala04" class="flat-item-link" target="_blank" rel="noopener noreferrer">github &nearr;</a>
+                        </div>
+                        <p class="flat-item-desc">High-performance packet filtering system leveraging NVIDIA CUDA for GPU-accelerated network traffic analysis, achieving significant throughput improvements over CPU-bound BPF implementations.</p>
                         <div class="tags">
-                            <span class="tag">Venture Capital</span>
-                            <span class="tag">Due Diligence</span>
-                            <span class="tag">Deep Tech</span>
+                            <span class="tag">CUDA</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Networking</span>
+                            <span class="tag">GPU Computing</span>
                         </div>
                     </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer</h3>
-                        <span class="company">Sensata Technologies</span>
-                        <p>Developed embedded software for industrial sensing systems, optimizing real-time data acquisition and processing.</p>
+                    <div class="flat-item">
+                        <div class="flat-item-title-row">
+                            <span class="flat-item-title">IoT Crash Detection System</span>
+                            <a href="https://github.com/ArjunNargolwala04" class="flat-item-link" target="_blank" rel="noopener noreferrer">github &nearr;</a>
+                        </div>
+                        <p class="flat-item-desc">Real-time vehicular crash detection system using distributed IoT sensor networks, accelerometer fusion, and edge computing for instant emergency response triggering.</p>
                         <div class="tags">
-                            <span class="tag">Embedded Systems</span>
-                            <span class="tag">C/C++</span>
                             <span class="tag">IoT</span>
+                            <span class="tag">Embedded</span>
+                            <span class="tag">Sensor Fusion</span>
+                            <span class="tag">Edge Computing</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Ventures Section -->
-    <section id="ventures" class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">03.</span> Ventures</h2>
-            <div class="ventures-grid">
-                <div class="venture-card reveal">
-                    <div class="venture-role">CEO</div>
-                    <h3>Optimal AI</h3>
-                    <p class="venture-tagline">AI-Native Enterprise SaaS</p>
-                    <p>Building intelligent enterprise software that leverages large language models and autonomous agents to transform business workflows.</p>
-                    <div class="venture-bar"></div>
-                </div>
-                <div class="venture-card reveal">
-                    <div class="venture-role">General Partner</div>
-                    <h3>Sentinel Trading Group</h3>
-                    <p class="venture-tagline">Multi-Strategy Hedge Fund</p>
-                    <p>Systematic multi-strategy fund combining statistical arbitrage, momentum, and market-making across equity and derivatives markets.</p>
-                    <div class="venture-bar"></div>
-                </div>
-                <div class="venture-card reveal">
-                    <div class="venture-role">CFO</div>
-                    <h3>Sidereal Energy Technologies</h3>
-                    <p class="venture-tagline">Algae-Based Biofuel Systems</p>
-                    <p>Developing next-generation biofuel production systems using engineered algae strains for sustainable energy at scale.</p>
-                    <div class="venture-bar"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">04.</span> Research</h2>
-            <div class="research-grid">
-                <div class="research-card reveal">
-                    <div class="research-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3>Systems Theory & Large-Scale ML</h3>
-                    <span class="research-affiliation">Independent Research</span>
-                    <p>Investigating theoretical frameworks for understanding emergent behavior in large-scale machine learning systems, focusing on scaling laws and systems-level dynamics.</p>
-                </div>
-                <div class="research-card reveal">
-                    <div class="research-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
-                        </svg>
-                    </div>
-                    <h3>Quantum-Accelerated Algorithms</h3>
-                    <span class="research-affiliation">Independent Research</span>
-                    <p>Exploring quantum computing paradigms for computational acceleration, with focus on hybrid quantum-classical architectures and near-term quantum advantage.</p>
-                </div>
-                <div class="research-card reveal">
-                    <div class="research-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
-                        </svg>
-                    </div>
-                    <h3>ML for Protein Folding</h3>
-                    <span class="research-affiliation">Harvard Engineering</span>
-                    <p>Collaborative research developing novel machine learning frameworks for protein structure prediction, contributing to computational biology methods for drug discovery.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">05.</span> Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card reveal">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                        <a href="https://github.com/ArjunNargolwala04" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <h3>CUDA-Accelerated Berkeley Packet Filter</h3>
-                    <p>High-performance packet filtering system leveraging NVIDIA CUDA for GPU-accelerated network traffic analysis, achieving significant throughput improvements over CPU-bound BPF implementations.</p>
-                    <div class="tags">
-                        <span class="tag">CUDA</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Networking</span>
-                        <span class="tag">GPU Computing</span>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                        </svg>
-                        <a href="https://github.com/ArjunNargolwala04" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <h3>IoT Crash Detection System</h3>
-                    <p>Real-time vehicular crash detection system using distributed IoT sensor networks, accelerometer fusion, and edge computing for instant emergency response triggering.</p>
-                    <div class="tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Embedded</span>
-                        <span class="tag">Sensor Fusion</span>
-                        <span class="tag">Edge Computing</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="title-number">06.</span> Contact</h2>
-            <div class="contact-content reveal">
-                <p class="contact-intro">
-                    I'm always interested in hearing about new opportunities, collaborations, or just connecting.
-                    Feel free to reach out.
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:arjunvnargolwala@gmail.com" class="contact-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">arjunvnargolwala@gmail.com</span>
+            <!-- Blog Section -->
+            <section id="blog" class="section">
+                <h2 class="section-heading"><span class="prompt">&gt;</span> blog</h2>
+                <div class="flat-list">
+                    <a href="https://arjunnargolwala.substack.com/p/benchmarking-the-frontier-a-perspective" target="_blank" rel="noopener noreferrer" class="flat-item blog-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-title">Benchmarking the Frontier: A Perspective from Inside an Evals Lab</span>
+                            <span class="flat-item-date">Jul 2025</span>
+                        </div>
+                        <p class="flat-item-desc">Lessons from building evaluations for frontier AI models — why quality means making questions real, not harder.</p>
+                        <div class="tags">
+                            <span class="tag">AI Evals</span>
+                            <span class="tag">Research</span>
+                            <span class="tag">Labelbox</span>
+                        </div>
                     </a>
-                    <a href="https://www.linkedin.com/in/arjun-nargolwala" target="_blank" rel="noopener noreferrer" class="contact-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/>
-                        </svg>
-                        <span class="contact-label">LinkedIn</span>
-                        <span class="contact-value">arjun-nargolwala</span>
+                    <a href="https://arjunnargolwala.substack.com/p/the-3x3-framework-what-im-learning" target="_blank" rel="noopener noreferrer" class="flat-item blog-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-title">The 3x3 Framework: What I'm Learning About Companies That Scale</span>
+                            <span class="flat-item-date">Jun 2025</span>
+                        </div>
+                        <p class="flat-item-desc">Mapping three value-creation paths to founder archetypes for evaluating early-stage startups.</p>
+                        <div class="tags">
+                            <span class="tag">Venture</span>
+                            <span class="tag">Frameworks</span>
+                            <span class="tag">Startups</span>
+                        </div>
                     </a>
-                    <a href="https://github.com/ArjunNargolwala04" target="_blank" rel="noopener noreferrer" class="contact-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-                        </svg>
-                        <span class="contact-label">GitHub</span>
-                        <span class="contact-value">ArjunNargolwala04</span>
+                    <a href="https://arjunnargolwala.substack.com/p/building-something-out-of-nothing" target="_blank" rel="noopener noreferrer" class="flat-item blog-item">
+                        <div class="flat-item-header">
+                            <span class="flat-item-title">Building something out of nothing.</span>
+                            <span class="flat-item-date">Jun 2025</span>
+                        </div>
+                        <p class="flat-item-desc">On finding direction — from high school confusion to ML research and early-stage investing.</p>
+                        <div class="tags">
+                            <span class="tag">Personal</span>
+                            <span class="tag">Career</span>
+                        </div>
                     </a>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Designed & Built by Arjun Nargolwala</p>
-    </footer>
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2 class="section-heading"><span class="prompt">&gt;</span> contact</h2>
+                <div class="contact-list">
+                    <a href="mailto:arjunvnargolwala@gmail.com" class="contact-row">
+                        <span class="cmd">$ mail</span> arjunvnargolwala@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/arjun-nargolwala" target="_blank" rel="noopener noreferrer" class="contact-row">
+                        <span class="cmd">$ open</span> linkedin.com/in/arjun-nargolwala
+                    </a>
+                    <a href="https://github.com/ArjunNargolwala04" target="_blank" rel="noopener noreferrer" class="contact-row">
+                        <span class="cmd">$ open</span> github.com/ArjunNargolwala04
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
 
     <script src="scripts/main.js"></script>
 </body>
