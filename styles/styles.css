@@ -25,7 +25,7 @@ body {
 .page {
     max-width: 600px;
     margin: 0 auto;
-    padding-block: clamp(48px, 12vh, 120px) clamp(64px, 10vh, 96px);
+    padding-block: max(env(safe-area-inset-top), clamp(40px, 9vh, 92px)) clamp(64px, 10vh, 96px);
     padding-inline: max(22px, env(safe-area-inset-left)) max(22px, env(safe-area-inset-right));
 }
 
