@@ -5,286 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arjun Nargolwala</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <main class="page">
 
-    <!-- Terminal Status Bar -->
-    <div class="window-bar">
-        <span class="window-title" id="status-section">~/arjun/about</span>
-    </div>
+        <header>
+            <h1>Arjun Nargolwala</h1>
+            <p class="links">
+                <a href="https://arjunnargolwala.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+                <a href="https://x.com/ArjunNargolwala" target="_blank" rel="noopener noreferrer">X</a>
+                <a href="https://github.com/ArjunNargolwala04" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/arjun-nargolwala" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:arjunvnargolwala@gmail.com">Email</a>
+            </p>
+        </header>
 
-    <!-- Mobile Nav (hidden on desktop) -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">~/arjun</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-        <div class="nav-links">
-            <a href="#about" data-section="about">about</a>
-            <a href="#experience" data-section="experience">experience</a>
-            <a href="#research" data-section="research">research</a>
-            <a href="#projects" data-section="projects">projects</a>
-            <a href="#blog" data-section="blog">blog</a>
-            <a href="#contact" data-section="contact">contact</a>
-        </div>
-    </nav>
+        <nav class="tabs" aria-label="Sections">
+            <a href="#about" data-tab="about">About</a>
+            <a href="#writing" data-tab="writing">Writing</a>
+        </nav>
 
-    <div class="split">
-
-        <!-- Left Panel — Fixed Identity -->
-        <aside class="panel-left">
-            <div class="panel-left-inner">
-                <div class="hero-content">
-                    <p class="hero-label stagger">$ bitaboutme</p>
-                    <h1 class="hero-name stagger" id="hero-name"></h1>
-                    <p class="hero-tagline stagger">Research, Engineering, Investing <span class="cursor">_</span></p>
-                    <p class="hero-subtitle stagger">
-                        At the intersection of systems, intelligence, and markets.
-                    </p>
-                    <div class="hero-links stagger">
-                        <a href="mailto:arjunvnargolwala@gmail.com">email</a>
-                        <span class="sep">/</span>
-                        <a href="https://github.com/ArjunNargolwala04" target="_blank" rel="noopener noreferrer">github</a>
-                        <span class="sep">/</span>
-                        <a href="https://www.linkedin.com/in/arjun-nargolwala" target="_blank" rel="noopener noreferrer">linkedin</a>
-                        <span class="sep">/</span>
-                        <a href="https://x.com/ArjunNargolwala" target="_blank" rel="noopener noreferrer">twitter</a>
-                    </div>
-                </div>
-                <nav class="panel-nav stagger">
-                    <a href="#about" data-section="about" class="active"><span class="nav-prompt">&gt; </span>about</a>
-                    <a href="#experience" data-section="experience"><span class="nav-prompt">&gt; </span>experience</a>
-                    <a href="#research" data-section="research"><span class="nav-prompt">&gt; </span>research</a>
-                    <a href="#projects" data-section="projects"><span class="nav-prompt">&gt; </span>projects</a>
-                    <a href="#blog" data-section="blog"><span class="nav-prompt">&gt; </span>blog</a>
-                    <a href="#contact" data-section="contact"><span class="nav-prompt">&gt; </span>contact</a>
-                </nav>
-                <div class="build-status">
-                    <div class="build-label">arjun v3.0 <span class="build-year">2026</span></div>
-                    <div class="build-bar"><div class="build-fill"></div></div>
-                    <div class="build-info"><span class="build-dot">&#9679;</span> running</div>
-                </div>
+        <section id="about" class="tab-panel">
+            <div class="block">
+                <p>I work on AI systems and invest in startups.</p>
+                <p>Studying computer science and economics at Penn M&amp;T.</p>
             </div>
-        </aside>
-
-        <!-- Right Panel — Single Section View -->
-        <main class="panel-right">
-
-            <!-- About Section -->
-            <section id="about" class="section active">
-                <h2 class="section-heading"><span class="prompt">&gt;</span> about</h2>
-                <div class="about-edu">
-                    <h3 class="edu-header">University of Pennsylvania M&amp;T Program '27</h3>
-                    <div class="edu-degrees">
-                        <div class="edu-card">
-                            <span class="edu-school">Penn Engineering</span>
-                            <span class="edu-degree">B.S.E Computer Science, Mathematics</span>
-                        </div>
-                        <div class="edu-card">
-                            <span class="edu-school">The Wharton School</span>
-                            <span class="edu-degree">B.S Economics, Finance</span>
-                        </div>
-                    </div>
+            <dl class="block facts">
+                <div class="group">
+                    <dt>Now</dt>
+                    <dd><span class="org">LangChain</span> <span class="dot">&middot;</span> <span class="role">Engineering + Research</span></dd>
+                    <dd><span class="org">Penn Engineering</span> <span class="dot">&middot;</span> <span class="role">ML Research</span></dd>
+                    <dd><span class="org">Contrary</span> <span class="dot">&middot;</span> <span class="role">Venture Partner</span></dd>
                 </div>
-                <div class="terminal-output">
-                    <p class="term-line"><span class="term-prompt">&gt;</span> Grew up between Boston and London. Now based in Philly.</p>
-                    <p class="term-line"><span class="term-prompt">&gt;</span> I build AI systems, do ML research, and invest in startups.</p>
-                    <p class="term-line"><span class="term-prompt">&gt;</span> Research Engineer @ Labelbox &mdash; RL, evals, post-training.</p>
-                    <p class="term-line"><span class="term-prompt">&gt;</span> Contributed to models at Anthropic, DeepMind, and Meta FAIR.</p>
-                    <p class="term-line"><span class="term-prompt">&gt;</span> Multi-agent RL research @ Penn ML Theory Group.</p>
-                    <p class="term-line"><span class="term-prompt">&gt;</span> Venture Partner @ Contrary Capital.</p>
-                    <p class="term-line"><span class="term-prompt">&gt;</span> Chess, poker, cars, food, impressionist art.</p>
+                <div class="group">
+                    <dt>Prev</dt>
+                    <dd><span class="org">Kleiner Perkins</span> <span class="dot">&middot;</span> <span class="role">Engineering Fellow</span></dd>
+                    <dd><span class="org">Labelbox</span> <span class="dot">&middot;</span> <span class="role">Research Engineer</span></dd>
                 </div>
-                <div class="about-locations">
-                    <span class="location-item"><span class="status-icon">&#9679;</span> Boston</span>
-                    <span class="location-item"><span class="status-icon">&#9679;</span> Philadelphia</span>
-                    <span class="location-item"><span class="status-icon">&#9679;</span> San Francisco</span>
-                </div>
-            </section>
+            </dl>
+            <div class="block">
+                <p>Grew up between Boston and London, now based in Philly.</p>
+                <p>I like to play chess, poker, and tennis.</p>
+            </div>
+        </section>
 
-            <!-- Experience Section -->
-            <section id="experience" class="section">
-                <h2 class="section-heading"><span class="prompt">&gt;</span> experience</h2>
-                <div class="flat-list">
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">Venture Partner</span>
-                            <span class="flat-item-org">Contrary</span>
-                        </div>
-                        <div class="tags"><span class="tag">Venture Capital</span><span class="tag">Startups</span></div>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">Machine Learning Researcher</span>
-                            <span class="flat-item-org">Penn Engineering &mdash; ML Theory Group</span>
-                        </div>
-                        <div class="tags"><span class="tag">Multi-Agent RL</span><span class="tag">ML Theory</span></div>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">Research Engineer</span>
-                            <span class="flat-item-org">Labelbox</span>
-                        </div>
-                        <div class="tags"><span class="tag">RL</span><span class="tag">Agents</span><span class="tag">Model Evals</span><span class="tag">Post-Training</span></div>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">Engineering Fellow</span>
-                            <span class="flat-item-org">Kleiner Perkins</span>
-                        </div>
-                        <div class="tags"><span class="tag">Fellowship</span><span class="tag">Engineering</span><span class="tag">VC</span></div>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">Growth Intern</span>
-                            <span class="flat-item-org">Mercor</span>
-                        </div>
-                        <div class="tags"><span class="tag">Growth</span><span class="tag">Platform</span></div>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">AI/ML Fellow</span>
-                            <span class="flat-item-org">Cerebras Systems</span>
-                        </div>
-                        <div class="tags"><span class="tag">AI/ML</span><span class="tag">Fellowship</span></div>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">Robotics Research Engineer</span>
-                            <span class="flat-item-org">GRASP Lab &mdash; X-Lab</span>
-                        </div>
-                        <div class="tags"><span class="tag">VLMs</span><span class="tag">Robotics</span></div>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">ML Engineer Intern</span>
-                            <span class="flat-item-org">Allegro MicroSystems</span>
-                        </div>
-                        <div class="tags"><span class="tag">ML</span><span class="tag">Semiconductor</span><span class="tag">ASIC Design</span></div>
-                    </div>
-                </div>
-            </section>
+        <section id="writing" class="tab-panel">
+            <ul class="rows">
+                <li><a href="https://arjunnargolwala.substack.com/p/benchmarking-the-frontier-a-perspective" target="_blank" rel="noopener noreferrer">Benchmarking the Frontier</a><span class="date">Jul 2025</span></li>
+                <li><a href="https://arjunnargolwala.substack.com/p/the-3x3-framework-what-im-learning" target="_blank" rel="noopener noreferrer">The 3x3 Framework</a><span class="date">Jun 2025</span></li>
+                <li><a href="https://arjunnargolwala.substack.com/p/building-something-out-of-nothing" target="_blank" rel="noopener noreferrer">Building something out of nothing.</a><span class="date">Jun 2025</span></li>
+            </ul>
+        </section>
 
-            <!-- Research Section -->
-            <section id="research" class="section">
-                <h2 class="section-heading"><span class="prompt">&gt;</span> research</h2>
-                <div class="flat-list">
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">Multi-Agent Reinforcement Learning</span>
-                            <span class="flat-item-org">Penn Engineering &mdash; ML Theory Group</span>
-                        </div>
-                        <p class="flat-item-desc">Research on multi-agent reinforcement learning systems, exploring coordination, competition, and emergent behavior in complex multi-agent environments.</p>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-role">Vision-Language Models for Industrial Robotics</span>
-                            <span class="flat-item-org">GRASP Lab &mdash; X-Lab</span>
-                        </div>
-                        <p class="flat-item-desc">Developing vision-language model applications for industrial robotics, bridging perception and language understanding for robotic manipulation and task planning.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="section">
-                <h2 class="section-heading"><span class="prompt">&gt;</span> projects</h2>
-                <div class="flat-list">
-                    <div class="flat-item">
-                        <div class="flat-item-title-row">
-                            <span class="flat-item-title">CUDA-Accelerated Berkeley Packet Filter</span>
-                            <a href="https://github.com/ArjunNargolwala04" class="flat-item-link" target="_blank" rel="noopener noreferrer">github &nearr;</a>
-                        </div>
-                        <p class="flat-item-desc">High-performance packet filtering system leveraging NVIDIA CUDA for GPU-accelerated network traffic analysis, achieving significant throughput improvements over CPU-bound BPF implementations.</p>
-                        <div class="tags">
-                            <span class="tag">CUDA</span>
-                            <span class="tag">C++</span>
-                            <span class="tag">Networking</span>
-                            <span class="tag">GPU Computing</span>
-                        </div>
-                    </div>
-                    <div class="flat-item">
-                        <div class="flat-item-title-row">
-                            <span class="flat-item-title">IoT Crash Detection System</span>
-                            <a href="https://github.com/ArjunNargolwala04" class="flat-item-link" target="_blank" rel="noopener noreferrer">github &nearr;</a>
-                        </div>
-                        <p class="flat-item-desc">Real-time vehicular crash detection system using distributed IoT sensor networks, accelerometer fusion, and edge computing for instant emergency response triggering.</p>
-                        <div class="tags">
-                            <span class="tag">IoT</span>
-                            <span class="tag">Embedded</span>
-                            <span class="tag">Sensor Fusion</span>
-                            <span class="tag">Edge Computing</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Blog Section -->
-            <section id="blog" class="section">
-                <h2 class="section-heading"><span class="prompt">&gt;</span> blog</h2>
-                <div class="flat-list">
-                    <a href="https://arjunnargolwala.substack.com/p/benchmarking-the-frontier-a-perspective" target="_blank" rel="noopener noreferrer" class="flat-item blog-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-title">Benchmarking the Frontier: A Perspective from Inside an Evals Lab</span>
-                            <span class="flat-item-date">Jul 2025</span>
-                        </div>
-                        <p class="flat-item-desc">Lessons from building evaluations for frontier AI models — why quality means making questions real, not harder.</p>
-                        <div class="tags">
-                            <span class="tag">AI Evals</span>
-                            <span class="tag">Research</span>
-                            <span class="tag">Labelbox</span>
-                        </div>
-                    </a>
-                    <a href="https://arjunnargolwala.substack.com/p/the-3x3-framework-what-im-learning" target="_blank" rel="noopener noreferrer" class="flat-item blog-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-title">The 3x3 Framework: What I'm Learning About Companies That Scale</span>
-                            <span class="flat-item-date">Jun 2025</span>
-                        </div>
-                        <p class="flat-item-desc">Mapping three value-creation paths to founder archetypes for evaluating early-stage startups.</p>
-                        <div class="tags">
-                            <span class="tag">Venture</span>
-                            <span class="tag">Frameworks</span>
-                            <span class="tag">Startups</span>
-                        </div>
-                    </a>
-                    <a href="https://arjunnargolwala.substack.com/p/building-something-out-of-nothing" target="_blank" rel="noopener noreferrer" class="flat-item blog-item">
-                        <div class="flat-item-header">
-                            <span class="flat-item-title">Building something out of nothing.</span>
-                            <span class="flat-item-date">Jun 2025</span>
-                        </div>
-                        <p class="flat-item-desc">On finding direction — from high school confusion to ML research and early-stage investing.</p>
-                        <div class="tags">
-                            <span class="tag">Personal</span>
-                            <span class="tag">Career</span>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h2 class="section-heading"><span class="prompt">&gt;</span> contact</h2>
-                <div class="contact-list">
-                    <a href="mailto:arjunvnargolwala@gmail.com" class="contact-row">
-                        <span class="cmd">$ mail</span> arjunvnargolwala@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/arjun-nargolwala" target="_blank" rel="noopener noreferrer" class="contact-row">
-                        <span class="cmd">$ open</span> linkedin.com/in/arjun-nargolwala
-                    </a>
-                    <a href="https://github.com/ArjunNargolwala04" target="_blank" rel="noopener noreferrer" class="contact-row">
-                        <span class="cmd">$ open</span> github.com/ArjunNargolwala04
-                    </a>
-                </div>
-            </section>
-
-        </main>
-
-    </div>
+    </main>
 
     <script src="scripts/main.js"></script>
 </body>
